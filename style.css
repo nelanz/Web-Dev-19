@@ -1,0 +1,46 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url(images/forest.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#title {
+    color: white;
+    font-family: 'Amatic SC';
+    font-size: 3vw;
+}
+
+#homeList {
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 1.5vw;
+}
+
+li {
+    margin: 0.5vw;
+}
+
+#greenBox {
+    height: 40%;
+    width: 60%;
+    border-radius: 25px;
+    background-color: #73AD21;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.85;
+    padding: 10px;
+}
+
+#linkInGreenBox {
+    font-size: 1vw;
+    position: absolute;
+    top: 90%;
+    right: 5%;
+}
