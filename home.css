@@ -21,7 +21,7 @@ body {
     font-size: 3vw;
 }
 
-#homeList {
+#home-list {
     font-family: 'Roboto', 'sans-serif';
     font-size: 1.5vw;
 }
@@ -30,7 +30,7 @@ li {
     margin: 0.5vw;
 }
 
-#greenBox {
+#green-box {
     height: 40%;
     width: 60%;
     border-radius: 25px;
@@ -43,7 +43,7 @@ li {
     padding: 10px;
 }
 
-#linkInGreenBox {
+#link-in-green-box {
     font-size: 1vw;
     position: absolute;
     top: 90%;
