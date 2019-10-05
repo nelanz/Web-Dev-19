@@ -1,0 +1,24 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(to bottom left, #003300, #008000);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+#div1 {
+   left: 300;
+   top: 500
+}
+
+#div1 img {
+    vertical-align: middle; 
+    left: 400;
+}
+ 
