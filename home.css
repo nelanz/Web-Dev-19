@@ -10,7 +10,12 @@ body {
     background-size: cover;
 }
 
-#title {
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.title {
     color: white;
     font-family: 'Amatic SC';
     font-size: 3vw;
