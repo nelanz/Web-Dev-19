@@ -3,11 +3,12 @@ html {
 }
 
 body {
-    background-image: url(images/forest.jpg);
+    background-image: url(images/planet-earth.jpg);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0;
 }
 
 .container {
@@ -15,10 +16,40 @@ body {
     margin: 0 auto;
 }
 
+.container a {
+    float: right;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 10%;
+    font-family: 'Amatic SC';
+    font-size: 1.5vw;
+}
+
+.container a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none
+}
+
+.container a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none
+}
+
+.container a:hover {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: none;
+}
+
 .title {
     color: white;
     font-family: 'Amatic SC';
     font-size: 3vw;
+    padding: 0;
+    margin: 0;
+    float: left;
 }
 
 .default-list {
@@ -34,12 +65,12 @@ li {
     height: 40%;
     width: 60%;
     border-radius: 25px;
-    background-color: #73AD21;
+    background-color: white;
     position: absolute;
     left: 50%;
     top: 60%;
     transform: translate(-50%, -50%);
-    opacity: 0.85;
+    opacity: 0.65;
     padding: 10px;
 }
 
@@ -52,9 +83,9 @@ li {
 
 .question {
     margin: 10px;
-    color: white;
+    color: black;
     font-family: 'Roboto', 'sans-serif';
-    font-size: 1.5vw
+    font-size: 1.5hw
 }
 
 p {
