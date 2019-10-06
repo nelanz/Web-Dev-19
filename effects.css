@@ -1,9 +1,9 @@
-/* html {
+html {
     height: 100%;
 }
 
 body {
-    background-image: linear-gradient(to bottom left, #003300, #008000);
+    background-image: url(images/pollution2.jpg);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,13 +12,22 @@ body {
     padding: 0;
 }
 
-#div1 {
-   left: 300;
-   top: 500
+  body {
+      font-family: 'Roboto', 'sans-serif';
+  }
+
+  .effects-box {
+    height: 80%;
+    width: 60%;
+    border-radius: 25px;
+    background-color: #666666;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+    padding: 10px;
+    overflow: auto;
 }
 
-#div1 img {
-    vertical-align: middle; 
-    left: 400;
-}
-  */
+
