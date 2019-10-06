@@ -1,0 +1,17 @@
+#facebook-pic {
+    position: absolute;
+    top: 80%;
+    left: 55%;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 10px
+}
+
+#github-pic {
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 10px
+}
