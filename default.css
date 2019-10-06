@@ -21,16 +21,16 @@ body {
     font-size: 3vw;
 }
 
-#home-list {
+.default-list {
     font-family: 'Roboto', 'sans-serif';
-    font-size: 1.5vw;
+    font-size: 1.3vw;
 }
 
 li {
     margin: 0.5vw;
 }
 
-#green-box {
+.green-box {
     height: 40%;
     width: 60%;
     border-radius: 25px;
@@ -48,4 +48,21 @@ li {
     position: absolute;
     top: 90%;
     right: 5%;
+}
+
+.question {
+    margin: 10px;
+    color: white;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 1.5vw
+}
+
+p {
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 1.5vw;
+    margin: 2%
+}
+
+a.home-link {
+    color: transparent
 }
