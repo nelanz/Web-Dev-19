@@ -1,7 +1,7 @@
 #facebook-pic {
     position: absolute;
-    top: 80%;
-    left: 55%;
+    top: 82%;
+    left: 48%;
     height: 3vw;
     width: 3vw;
     border-radius: 10px
@@ -9,9 +9,31 @@
 
 #github-pic {
     position: absolute;
-    top: 80%;
-    left: 40%;
+    top: 82%;
+    left: 41%;
     height: 3vw;
     width: 3vw;
     border-radius: 10px
+}
+
+#mail-pic {
+    position: absolute;
+    top: 79%;
+    left:54%;
+    height: 5vw;
+    width: 5vw;
+    border-radius: 10px
+}
+
+.about-us-box {
+    height: 70%;
+    width: 60%;
+    border-radius: 25px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    opacity: 0.75;
+    padding: 10px;
 }
