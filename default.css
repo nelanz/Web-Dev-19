@@ -95,5 +95,10 @@ p {
 }
 
 a.home-link {
-    color: transparent
+    float: left;
+    color: white;
+    background-color: transparent;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 0
 }
