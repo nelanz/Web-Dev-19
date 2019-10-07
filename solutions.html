@@ -18,15 +18,17 @@
   <nav style="color: white">
     <div class="container">
 
-      <h1 class="title">🌎EcoConscious</h1>
+      <a class="home-link" href="/home.html">
+        <h1 class="title">🌎EcoConscious</h1>
+      </a>
 
       <a href="/about_us.html">O nas</a>
-      <a>Podpisz petycję</a>
-      <a href="effects.html">Skutki</a>
+      <a href="/solutions.html">Wypełnij ankietę</a>
+      <a href="/effects.html">Skutki</a>
     </div>
   </nav>
   <div class="effects-box">
-    <h1 class="question">Wypełnij ankietę i miej swój wkład w ratowanie planety</h1>
+    <h1 class="question">Wypełnij ankietę i miej swój wkład w ratowanie planety!</h1>
 
 
     <style>
@@ -35,128 +37,148 @@
         border: 1px solid whitesmoke;
       }
     </style>
-    
+
     <form method="POST" action="home.html">
-        <input type="hidden" name="recipient" value="n.tomaszewicz@gmail.com">
-        <input type="hidden" name="subject" value="Questionaire">
+      <input type="hidden" name="recipient" value="n.tomaszewicz@gmail.com">
+      <input type="hidden" name="subject" value="Questionaire">
 
-        <p align="center"><font size="3" >
-                <strong>Płeć &nbsp;&nbsp;</strong><br>
-                  <label>Kobieta
-                    <input name="sex" type="radio" value="k" checked>
-                  </label>
-                  <label>Mężczyzna
-                    <input name="sex" type="radio" value="m" checked>
-                  </label>
-            </font></p>
+      <p align="center">
+        <font size="3">
+          <strong>Płeć &nbsp;&nbsp;</strong><br>
+          <label>Kobieta
+            <input name="sex" type="radio" value="k" checked>
+          </label>
+          <label>Mężczyzna
+            <input name="sex" type="radio" value="m" checked>
+          </label>
+        </font>
+      </p>
 
-        <p align="center"><font size="3" >
-            <strong>Czy wierzysz w globalne ocieplenie? &nbsp;&nbsp;</strong><br>
-              <label>Tak
-                <input name="belief" type="radio" value="tak" checked>
-              </label>
-              <label>Nie
-                <input name="belief" type="radio" value="nie" checked>
-              </label>
-              <label>Nie wiem
-                <input name="belief" type="radio" value="nie-wiem" checked>
-             </label>
-        </font></p>
+      <p align="center">
+        <font size="3">
+          <strong>Czy wierzysz w globalne ocieplenie? &nbsp;&nbsp;</strong><br>
+          <label>Tak
+            <input name="belief" type="radio" value="tak" checked>
+          </label>
+          <label>Nie
+            <input name="belief" type="radio" value="nie" checked>
+          </label>
+          <label>Nie wiem
+            <input name="belief" type="radio" value="nie-wiem" checked>
+          </label>
+        </font>
+      </p>
 
-        <p align="center"><font size="3">
-            <strong>Jak uważasz - kto jest najbardziej odpowiedzialny za zmiany klimatu?</strong><br>
-            <label>Rządzący
-                <input name="guilt" type="checkbox" value="rzadzacy">
-            </label>
-            <label>Przedsiębiorstwa
-                    <input name="guilt" type="checkbox" value="przedsiebiorcy">
-            </label>
-            <label>Obywatele
-                    <input name="guilt" type="checkbox" value="obywatele">
-            </label>
-            <label>Nikt - to zjawisko naturalne
-                    <input name="guilt" type="checkbox" value="nikt">
-            </label>
-        </font></p>
+      <p align="center">
+        <font size="3">
+          <strong>Jak uważasz - kto jest najbardziej odpowiedzialny za zmiany klimatu?</strong><br>
+          <label>Rządzący
+            <input name="guilt" type="checkbox" value="rzadzacy">
+          </label>
+          <label>Przedsiębiorstwa
+            <input name="guilt" type="checkbox" value="przedsiebiorcy">
+          </label>
+          <label>Obywatele
+            <input name="guilt" type="checkbox" value="obywatele">
+          </label>
+          <label>Nikt - to zjawisko naturalne
+            <input name="guilt" type="checkbox" value="nikt">
+          </label>
+        </font>
+      </p>
 
-        <p align="center"><font size="3">
-            <label><strong>Który kontynent emituje twoim zdaniem najwięcej CO<sub>2</sub>?</strong><br>
-            <select name="territories" >
-                <option value="nie-wiem" selected>Nie wiem</option>
-                <option value="afryka">Afryka</option>
-                <option value="am-pd">Ameryka Południowa</option>
-                <option value="am-pn">Ameryka Północna</option>
-                <option value="australia">Australia</option>
-                <option value="azja">Azja</option>
-                <option value="europa">Europa</option>
-                <option value="wszyscy">Wszyscy tyle samo</option>                
+      <p align="center">
+        <font size="3">
+          <label><strong>Który kontynent emituje twoim zdaniem najwięcej CO<sub>2</sub>?</strong><br>
+            <select name="territories">
+              <option value="nie-wiem" selected>Nie wiem</option>
+              <option value="afryka">Afryka</option>
+              <option value="am-pd">Ameryka Południowa</option>
+              <option value="am-pn">Ameryka Północna</option>
+              <option value="australia">Australia</option>
+              <option value="azja">Azja</option>
+              <option value="europa">Europa</option>
+              <option value="wszyscy">Wszyscy tyle samo</option>
             </select>
-            </label>
-        </p>
+          </label>
+      </p>
 
-        <p align="center"><font size="3">
-                <strong>Jakie są według ciebie najlepsze sposoby na walkę z zanieczyszczeniem powietrza? Które osobiście popierasz?</strong><br>
-                <label>Całkowity zakaz używania silników spalinowych
-                    <input name="solution" type="checkbox" value="silniki">
-                </label>
-                <label>Przejście na ogrzewanie gazowe/elektryczne
-                        <input name="solution" type="checkbox" value="ogrzewanie">
-                </label><br>
-                <label>Ograniczenie lotów
-                        <input name="solution" type="checkbox" value="loty">
-                </label>
-                <label>Powrót do kupna tylko lokalnych produktów
-                        <input name="solution" type="checkbox" value="produkty">
-                </label><br>
-                <label>Bezwzględne przejście na energię ze źródeł odnawialnych 
-                        <input name="solution" type="checkbox" value="energia">
-                </label>
-                <label>Pomoc humanitarna w krajach biedniejszych
-                        <input name="solution" type="checkbox" value="pomoc">
-                </label><br>
-                <label>Zwiększenie funduszy na pomoc najbiedniejszym
-                        <input name="solution" type="checkbox" value="fundusze">
-                </label>
-                <label>Zwiększenie dofinansowań na inicjatywy ekologiczne
-                        <input name="solution" type="checkbox" value="dofinansowania">
-                </label><br>
-                <label>Inne (max 300 znaków)
-                    <textarea name="solution" rows="3" cols="100"></textarea>
-                </label>
-            </font></p> 
-            
-        <p align="center"><font size="3">
-             <label><strong> Podaj nazwę kraju, który według Ciebie najlepiej walczy z zanieczyszczeniem powietrza:&nbsp;&nbsp;</strong>
-                  <input name="country" type="text" size="30" maxlength="50">
-             </label>
-         </font></p>
+      <p align="center">
+        <font size="3">
+          <strong>Jakie są według ciebie najlepsze sposoby na walkę z zanieczyszczeniem powietrza? Które osobiście
+            popierasz?</strong><br>
+          <label>Całkowity zakaz używania silników spalinowych
+            <input name="solution" type="checkbox" value="silniki">
+          </label>
+          <label>Przejście na ogrzewanie gazowe/elektryczne
+            <input name="solution" type="checkbox" value="ogrzewanie">
+          </label><br>
+          <label>Ograniczenie lotów
+            <input name="solution" type="checkbox" value="loty">
+          </label>
+          <label>Powrót do kupna tylko lokalnych produktów
+            <input name="solution" type="checkbox" value="produkty">
+          </label><br>
+          <label>Bezwzględne przejście na energię ze źródeł odnawialnych
+            <input name="solution" type="checkbox" value="energia">
+          </label>
+          <label>Pomoc humanitarna w krajach biedniejszych
+            <input name="solution" type="checkbox" value="pomoc">
+          </label><br>
+          <label>Zwiększenie funduszy na pomoc najbiedniejszym
+            <input name="solution" type="checkbox" value="fundusze">
+          </label>
+          <label>Zwiększenie dofinansowań na inicjatywy ekologiczne
+            <input name="solution" type="checkbox" value="dofinansowania">
+          </label><br>
+          <label>Inne (max 300 znaków)
+            <textarea name="solution" rows="3" cols="100"></textarea>
+          </label>
+        </font>
+      </p>
 
-        <p align="center"><font size="3">
-            <label><strong> Dodatkowe przemyślenia? Podziel się nimi z nami:)</strong><br>
-                <textarea name="thoughts" rows="4" cols="50"></textarea>
-            </label>
-        </font></p>
+      <p align="center">
+        <font size="3">
+          <label><strong> Podaj nazwę kraju, który według Ciebie najlepiej walczy z zanieczyszczeniem
+              powietrza:&nbsp;&nbsp;</strong>
+            <input name="country" type="text" size="30" maxlength="50">
+          </label>
+        </font>
+      </p>
 
-        <p align="center"><font size="3">
-                <label>Podaj swój rok urodzenia - pomoże nam to przy analizowaniu wyników:&nbsp;&nbsp;
-                    <input name="year" type="number" size="20" maxlength="4">
-               </label>
-            </font></p>
+      <p align="center">
+        <font size="3">
+          <label><strong> Dodatkowe przemyślenia? Podziel się nimi z nami:)</strong><br>
+            <textarea name="thoughts" rows="4" cols="50"></textarea>
+          </label>
+        </font>
+      </p>
 
-       
-        <p align="center"><font size="3">
-            <label>Jeżeli chcesz otrzymywać od nas statystyki ankiety podaj swój adres e-mail:&nbsp;&nbsp;
-                <input name="mail" type="text" size="20" maxlength="30">
-           </label>
-        </font></p>
+      <p align="center">
+        <font size="3">
+          <label>Podaj swój rok urodzenia - pomoże nam to przy analizowaniu wyników:&nbsp;&nbsp;
+            <input name="year" type="number" size="20" maxlength="4">
+          </label>
+        </font>
+      </p>
 
-        <p>
-            <input type="reset" value="Wyczyść">
-            <input type="submit" value="Prześlij">
-        </p>
+
+      <p align="center">
+        <font size="3">
+          <label>Jeżeli chcesz otrzymywać od nas statystyki ankiety podaj swój adres e-mail:&nbsp;&nbsp;
+            <input name="mail" type="text" size="20" maxlength="30">
+          </label>
+        </font>
+      </p>
+
+      <p>
+        <input type="reset" value="Wyczyść">
+        <input type="submit" value="Prześlij">
+      </p>
 
     </form>
 
   </div>
 </body>
+
 </html>
