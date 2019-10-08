@@ -20,7 +20,7 @@ body {
     float: right;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-left: 10%;
+    margin-left: 8%;
     font-family: 'Amatic SC';
     font-size: 2vw;
 }
@@ -85,7 +85,7 @@ li {
     margin: 10px;
     color: black;
     font-family: 'Roboto', 'sans-serif';
-    font-size: 1.5hw
+    font-size: 2vw
 }
 
 p {

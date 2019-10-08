@@ -1,9 +1,12 @@
-html {
-    height: 100%;
+.link-to-letters {
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 2vw; 
+    background-color: transparent;
+    text-decoration: none;
 }
 
 body {
-    background-image: url(images/traveller1.jpg);
+    background-image: url(images/help.jpg);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,16 +15,11 @@ body {
     padding: 0;
 }
 
-  body {
-      font-family: 'Roboto', 'sans-serif';
-      
-  }
-
-  .solutions-box {
-    height: 80%;
+.send-letter-box {
+    height: 35%;
     width: 60%;
     border-radius: 25px;
-    background-color: #666666;
+    background-color: white;
     position: absolute;
     left: 50%;
     top: 55%;
@@ -30,6 +28,3 @@ body {
     padding: 10px;
     overflow: auto;
 }
-
-
-
