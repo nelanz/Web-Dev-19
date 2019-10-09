@@ -37,3 +37,7 @@
     opacity: 0.75;
     padding: 10px;
 }
+
+mark {
+    background-color: rgb(25, 201, 63);
+}
