@@ -30,4 +30,8 @@ body {
     overflow: auto;
 }
 
+details {
+    margin: 10px;
+}
+
 
