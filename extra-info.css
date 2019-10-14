@@ -1,0 +1,35 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url(images/GetToKnow.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+  body {
+      font-family: 'Roboto', 'sans-serif';
+      
+  }
+
+  .extra-info-box {
+    height: 50%;
+    width: 60%;
+    border-radius: 25px;
+    background-color: #666666;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+    padding: 10px;
+    overflow: auto;
+}
+
+
+

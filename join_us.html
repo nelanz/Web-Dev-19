@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="zgłoszenie, problem, zmiany klimatu, ekologia, globalne ocieplenie">
+  <meta name="author" content="Nela Tomaszewicz & Agata Rudzka">
+  <meta name="description" content="Dołącz do nas i pomóż nam zmieniać świat.">
+
+  <link rel="stylesheet" href="default.css">
+  <link rel="stylesheet" href="join_us.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+ 
+  <title>Dołącz do nas</title>
+</head>
+
+<body>
+  <nav>
+    <div class="container">
+
+      <a class="home-link" href="/home.html">
+        <h1 class="title">🌎EcoConscious</h1>
+      </a>
+
+      <a href="/extra-info.html">Poznajmy się</a>
+      <a href="/join_us.html">Dołącz do nas</a>
+      <a href="/about_us.html">O nas</a>
+      <a href="/solutions.html">Wypełnij ankietę</a>
+      <a href="/send_letter.html">Wyślij list</a>
+      <a href="/effects.html">Skutki</a>
+    </div>
+  </nav>
+  <div class="join-us-box">
+    <h1 class="question">Chcesz do nas dołączyć? Zacznij działać już dziś:)</h1>
+
+
+    <style>
+      td,
+      th {
+        border: 1px solid whitesmoke;
+      }
+    </style>
+
+    <form method="POST" autocomplete="on" action="home.html" >
+      <input type="hidden" name="recipient" value="n.tomaszewicz@gmail.com">
+      <input type="hidden" name="subject" value="Sign up">
+
+      <p><font size="3">  
+        <label><strong>Imię: &nbsp;&nbsp;</strong>
+          <input type="text" id="name" placeholder="Imię" size="30" maxlength="15" autofocus />
+          &nbsp;&nbsp;(Text, max.15 znaków)
+        </label></font>
+      </p>
+
+      <p><font size="3">
+        <label><strong>Nazwisko: &nbsp;&nbsp;</strong>
+            <input type="text" id="surname" placeholder="Nazwisko" size="30" maxlength="30" required/>
+            &nbsp;&nbsp;(Text, max.30 znaków)
+        </label></font>
+      </p>
+
+      <p><font size="3">
+        <label for="txtList"><strong>Miesiąc urodzin: &nbsp;&nbsp;</strong>
+            <input type="text" id="txtList" placeholder="Nazwa miesiąca" list="months" />
+            <datalist id="months">
+                <option value="Styczeń"></option>
+                <option value="Luty"></option>
+                <option value="Marzec"></option>
+                <option value="Kwiecień"></option>
+                <option value="Maj"></option>
+                <option value="Czerwiec"></option>
+                <option value="Lipiec"></option>
+                <option value="Sierpień"></option>
+                <option value="Wrzesień"></option>
+                <option value="Październik"></option>
+                <option value="Listopad"></option>
+                <option value="Grudzień"></option>
+            </datalist>&nbsp;&nbsp;(Słownie-miesiąc urodzenia, np.: Styczeń)
+        </label></font>
+        </p>
+
+        <p><font size="3">
+                <label><strong>Adres e-mail: &nbsp;&nbsp;</strong>
+                    <input type="email" placeholder="email@domena.pl" size="60" maxlength="50" required/>
+                    &nbsp;&nbsp;(nazwa@domena.pl, max.50 znaków)
+                </label></font>
+        </p>
+
+        <p><font size="3">
+                <label><strong>Telefon: &nbsp;&nbsp;</strong>
+                    <input type="tel" placeholder="###-###-###" pattern="\d{3}-\d{3}-\d{3}" />
+                    &nbsp;&nbsp;(np.: 123-456-789)
+                </label></font> 
+        </p>
+
+      <p>
+        <input type="reset" value="Wyczyść">
+        <input type="submit" value="Prześlij">
+      </p>
+
+    </form>
+
+  </div>
+</body>
+
+</html>
