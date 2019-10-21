@@ -74,3 +74,13 @@ aside {
 aside > p {
     margin: .5rem;
 }
+
+@media print{
+    body {background-color: white;}
+    aside {
+           box-shadow: inset 5px 0 5px -5px black;
+           font-style: normal;
+           color: black;
+           }
+    mark {background-color: yellow;}
+ }

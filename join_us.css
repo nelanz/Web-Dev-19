@@ -17,6 +17,32 @@ body {
       
   }
 
+  p{
+      font-size:1em;
+  }
+
+  input[type="text"],
+  input[type="email"]{
+    position: relative;
+    width: 20%;
+}
+
+footer p{
+    font-size: 1.5ex;
+    position: relative;
+    bottom: -10ex;
+}
+
+p label input:required{
+    background-color: skyblue;
+    border: 2px solid black;
+}
+
+input:focus{
+    border-style: solid;
+    border-width:thin;
+}
+
   .join-us-box {
     height: 50%;
     width: 60%;

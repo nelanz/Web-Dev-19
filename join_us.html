@@ -35,32 +35,32 @@
     <h1 class="question">Chcesz do nas dołączyć? Zacznij działać już dziś 😊</h1>
 
 
-    <style>
+   <!-- <style>
       td,
       th {
         border: 1px solid whitesmoke;
       }
-    </style>
+    </style>-->
 
     <form method="POST" autocomplete="on" action="home.html" >
       <input type="hidden" name="recipient" value="n.tomaszewicz@gmail.com">
       <input type="hidden" name="subject" value="Sign up">
 
-      <p><font size="3">  
+      <p> 
         <label><strong>Imię: &nbsp;&nbsp;</strong>
-          <input type="text" id="name" placeholder="Imię" size="30" maxlength="15" autofocus />
+          <input type="text" id="name" placeholder="Imię"  maxlength="15" autofocus />
           &nbsp;&nbsp;(Text, max.15 znaków)
-        </label></font>
+        </label>
       </p>
 
-      <p><font size="3">
+      <p>
         <label><strong>*Nazwisko: &nbsp;&nbsp;</strong>
-            <input type="text" id="surname" placeholder="Nazwisko" size="30" maxlength="30" required/>
+            <input type="text" id="surname" placeholder="Nazwisko"  maxlength="30" required/> 
             &nbsp;&nbsp;(Text, max.30 znaków)
-        </label></font>
+        </label>
       </p>
 
-      <p><font size="3">
+      <p>
         <label for="txtList"><strong>Miesiąc urodzin: &nbsp;&nbsp;</strong>
             <input type="text" id="txtList" placeholder="Nazwa miesiąca" list="months" />
             <datalist id="months">
@@ -77,21 +77,21 @@
                 <option value="Listopad"></option>
                 <option value="Grudzień"></option>
             </datalist>&nbsp;&nbsp;(Słownie-miesiąc urodzenia, np.: Styczeń)
-        </label></font>
+        </label>
         </p>
 
-        <p><font size="3">
+        <p>
                 <label><strong>*Adres e-mail: &nbsp;&nbsp;</strong>
-                    <input type="email" placeholder="email@domena.pl" size="60" maxlength="50" required/>
+                    <input type="email" placeholder="email@domena.pl"  maxlength="50" required/>
                     &nbsp;&nbsp;(nazwa@domena.pl, max.50 znaków)
-                </label></font>
+                </label>
         </p>
 
-        <p><font size="3">
+        <p>
                 <label><strong>Telefon: &nbsp;&nbsp;</strong>
                     <input type="tel" placeholder="###-###-###" pattern="\d{3}-\d{3}-\d{3}" />
                     &nbsp;&nbsp;(np.: 123-456-789)
-                </label></font> 
+                </label> 
         </p>
 
       <p>
@@ -102,7 +102,7 @@
     </form>
 
     <footer>
-      <p><font size="2"><em>Pola oznaczone * są obowiązkowe</em></font></p>
+      <p><em>Pola oznaczone * są obowiązkowe</em></p>  
     </footer>
   </div>
 </body>

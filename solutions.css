@@ -17,6 +17,49 @@ body {
       
   }
 
+  p{
+      text-align:center;
+      font-size:1em;
+  }
+
+  input[type="number"],
+  input[type="text"]{
+      width:20%;
+  }
+
+  p label:only-child{
+      text-decoration: underline;
+  }
+
+  p label input:disabled{
+      background-color: lightcoral;
+  }
+
+  .question-continent option:first-child{
+   font-weight:bold;
+  }
+
+  .question-continent option:nth-child(2n){
+    color: red ;
+   }
+
+   .question-continent option:nth-last-child(3){
+    font-weight:bold; 
+    color:blue;
+   }
+
+   .question-continent option:last-child{
+    font-style: oblique;
+   }
+
+   p input:last-of-type{
+       color: rgb(19, 153, 19);
+   }
+
+   p label input:checked{
+      outline: 1px dotted rgb(9, 194, 9);
+   }
+
   .solutions-box {
     height: 80%;
     width: 60%;
