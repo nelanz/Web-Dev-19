@@ -11,25 +11,54 @@
   <link rel="stylesheet" href="extra-info.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
- 
+
   <title>Poznajmy się</title>
 </head>
 
 <body>
-  <nav>
-    <div class="container">
-
-      <a class="home-link" href="/home.html">
-        <h1 class="title">🌎EcoConscious</h1>
-      </a>
-
-      <a href="/extra-info.html">Poznajmy się</a>
-      <a href="/join_us.html">Dołącz do nas</a>
-      <a href="/about_us.html">O nas</a>
-      <a href="/solutions.html">Wypełnij ankietę</a>
-      <a href="/send_letter.html">Wyślij list</a>
-      <a href="/effects.html">Skutki</a>
-    </div>
+  <a class="home-link" href="/home.html">
+    <h1 class="title">🌎EcoConscious</h1>
+  </a>
+  <nav id="menu">
+    <input type="checkbox" id="tm">
+    <ul class="main-menu clearfix">
+      <li><a href="/about_us.html">O nas</a></li>
+      <li><a href="/extra-info.html">Poznajmy się</a></li>
+      <li><a href="/solutions.html">Wypełnij ankietę</a></li>
+      <li><a href="/send_letter.html">Wyślij list</a></li>
+      <li><a href="/effects.html">Skutki</a></li>
+      <li><a href="#">Nasze produkty
+          <span class="drop-icon">▾</span>
+          <label title="Toggle Drop-down" class="drop-icon" for="sm1">▾</label>
+        </a>
+        <input type="checkbox" id="sm1">
+        <ul class="sub-menu">
+          <li><a href="#">Worki wielorazowe</a></li>
+          <li><a href="#">Kosmetyki naturalne
+              <span class="drop-icon">▾</span>
+              <label title="Toggle Drop-down" class="drop-icon" for="sm2">▾</label>
+            </a>
+            <input type="checkbox" id="sm2">
+            <ul class="sub-menu">
+              <li><a href="#">Do ciała</a>
+              </li>
+              <li><a href="#">Do włosów
+                  <span class="drop-icon">▾</span>
+                  <label title="Toggle Drop-down" class="drop-icon" for="sm3">▾</label>
+                </a>
+                <input type="checkbox" id="sm3">
+                <ul class="sub-menu">
+                  <li><a href="#">Szampony</a></li>
+                  <li><a href="#">Odżywki</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Do twarzy</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Eko zabawki</a></li>
+        </ul>
+      </li>
+    </ul>
   </nav>
   <div class="extra-info-box">
     <h1 class="question">Opowiedz nam o sobie - poznajmy się lepiej</h1>
@@ -42,38 +71,39 @@
       }
     </style>-->
 
-    <form method="POST" action="home.html" >
+    <form method="POST" action="home.html">
       <input type="hidden" name="recipient" value="n.tomaszewicz@gmail.com">
       <input type="hidden" name="subject" value="Extra Info">
 
-      
+
       <p>
         <label><strong>Od kiedy działasz na rzecz środowiska? Podaj miesiąc i rok: &nbsp;&nbsp;</strong>
-            <input type="month" value="2019-10"  maxlength="7"/>   
+          <input type="month" value="2019-10" maxlength="7" />
         </label>
       </p>
 
       <p>
-        <label><strong>Jak dużą wagę przykładasz do segregacji odpadów? <em>(1-żadną, 5-bardzo dużą)</em> &nbsp;&nbsp;</strong>
-            1&nbsp;<input type="range" min="1" max="5" value="3"/>&nbsp;5
+        <label><strong>Jak dużą wagę przykładasz do segregacji odpadów? <em>(1-żadną, 5-bardzo dużą)</em>
+            &nbsp;&nbsp;</strong>
+          1&nbsp;<input type="range" min="1" max="5" value="3" />&nbsp;5
         </label>
-        </p>
+      </p>
 
-     <p>
+      <p>
         <label><strong>Strona, która najbardziej Cię inspiruje: &nbsp;&nbsp;</strong>
-            <input type="url" placeholder="ecoconscious.pl" maxlength="50"/>   
-         </label>
-     </p>
+          <input type="url" placeholder="ecoconscious.pl" maxlength="50" />
+        </label>
+      </p>
 
-     <p>
-         <label><strong>Ublubione zwierzę: &nbsp;&nbsp;</strong>
-            <input type="search" placeholder="zwierzę"  />
-         </label> 
-     </p>
-        
-    <p> 
+      <p>
+        <label><strong>Ublubione zwierzę: &nbsp;&nbsp;</strong>
+          <input type="search" placeholder="zwierzę" />
+        </label>
+      </p>
+
+      <p>
         <label><strong>Ulubiony kolor: &nbsp;&nbsp;</strong>
-          <input type="color" value="#ffc0cb"/>
+          <input type="color" value="#ffc0cb" />
         </label>
       </p>
 
