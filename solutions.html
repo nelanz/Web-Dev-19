@@ -35,31 +35,28 @@
     <h1 class="question">Wypełnij ankietę i miej swój wkład w ratowanie planety!</h1>
 
 
-    <style>
+   <!-- <style>
       td,
       th {
         border: 1px solid whitesmoke;
       }
-    </style>
+    </style>-->
 
     <form method="POST" action="home.html">
       <input type="hidden" name="recipient" value="n.tomaszewicz@gmail.com">
       <input type="hidden" name="subject" value="Questionaire">
 
-      <p align="center">
-        <font size="3">
+      <p>      
           <strong>Płeć &nbsp;&nbsp;</strong><br>
           <label>Kobieta
             <input name="sex" type="radio" value="k" checked>
           </label>
           <label>Mężczyzna
             <input name="sex" type="radio" value="m" checked>
-          </label>
-        </font>
+          </label>       
       </p>
 
-      <p align="center">
-        <font size="3">
+      <p>
           <strong>Czy wierzysz w globalne ocieplenie? &nbsp;&nbsp;</strong><br>
           <label>Tak
             <input name="belief" type="radio" value="tak" checked>
@@ -70,11 +67,9 @@
           <label>Nie wiem
             <input name="belief" type="radio" value="nie-wiem" checked>
           </label>
-        </font>
       </p>
 
-      <p align="center">
-        <font size="3">
+      <p >
           <strong>Jak uważasz - kto jest najbardziej odpowiedzialny za zmiany klimatu?</strong><br>
           <label>Rządzący
             <input name="guilt" type="checkbox" value="rzadzacy">
@@ -88,13 +83,11 @@
           <label>Nikt - to zjawisko naturalne
             <input name="guilt" type="checkbox" value="nikt">
           </label>
-        </font>
       </p>
 
-      <p align="center">
-        <font size="3">
-          <label><strong>Który kontynent emituje twoim zdaniem najwięcej CO<sub>2</sub>?</strong><br>
-            <select name="territories">
+      <p>
+          <label ><strong>Który kontynent emituje twoim zdaniem najwięcej CO<sub>2</sub>?</strong><br>
+            <select class="question-continent" name="territories">
               <option value="nie-wiem" selected>Nie wiem</option>
               <option value="afryka">Afryka</option>
               <option value="am-pd">Ameryka Południowa</option>
@@ -107,8 +100,7 @@
           </label>
       </p>
 
-      <p align="center">
-        <font size="3">
+      <p>
           <strong>Jakie są według ciebie najlepsze sposoby na walkę z zanieczyszczeniem powietrza? Które osobiście
             popierasz?</strong><br>
           <label>Całkowity zakaz używania silników spalinowych
@@ -138,41 +130,32 @@
           <label>Inne (max 300 znaków)
             <textarea name="solution" rows="3" cols="100"></textarea>
           </label>
-        </font>
       </p>
 
-      <p align="center">
-        <font size="3">
+      <p>
           <label><strong> Podaj nazwę kraju, który według Ciebie najlepiej walczy z zanieczyszczeniem
               powietrza:&nbsp;&nbsp;</strong>
-            <input name="country" type="text" size="30" maxlength="50">
+            <input name="country" type="text"  maxlength="50">
           </label>
-        </font>
       </p>
 
-      <p align="center">
-        <font size="3">
+      <p>
           <label><strong> Dodatkowe przemyślenia? Podziel się nimi z nami:)</strong><br>
             <textarea name="thoughts" rows="4" cols="50"></textarea>
           </label>
-        </font>
       </p>
 
-      <p align="center">
-        <font size="3">
+      <p>
           <label>Podaj swój rok urodzenia - pomoże nam to przy analizowaniu wyników:&nbsp;&nbsp;
-            <input name="year" type="number" size="20" maxlength="4">
+            <input name="year" type="number"  maxlength="4">
           </label>
-        </font>
       </p>
 
 
-      <p align="center">
-        <font size="3">
+      <p>
           <label>Jeżeli chcesz otrzymywać od nas statystyki ankiety podaj swój adres e-mail:&nbsp;&nbsp;
-            <input name="mail" type="text" size="20" maxlength="30">
+            <input name="mail" type="text" maxlength="30" disabled>
           </label>
-        </font>
       </p>
 
       <p>

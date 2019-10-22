@@ -17,6 +17,14 @@ body {
       
   }
 
+  p{
+      font-size:1.2em;
+  }
+  label input{
+      position: relative;
+      size:50%;
+  }
+
   .extra-info-box {
     height: 50%;
     width: 60%;

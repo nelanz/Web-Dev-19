@@ -16,6 +16,53 @@ body {
       font-family: 'Roboto', 'sans-serif';
   }
 
+.question1{
+  position: relative;
+  top: 0.2 ex;
+}
+
+  table{
+     border: 1px solid whitesmoke;
+     /*position: absolute;
+     left: 30%;
+     top: 15%;
+     transform: translate(-20%, 0%);*/
+     /*position:relative;
+     top: 1ex;
+     left:15%;
+     width:70%;*/ 
+     position: fixed;
+     width:97%;    
+  }
+
+  th,td{
+     border: 1px solid whitesmoke;
+  }
+
+tr th{
+  position:relative;
+    width:7%;
+  }
+
+  .td-photo>img{
+    position:relative;
+    max-width: 100%;
+  }
+
+  .filler{
+    background-color: white;
+    position: relative;
+    width: 2%;
+  }
+
+  .subtitle{
+    font-size: 1.5em;
+    line-height: 2em;
+    color: white;
+    position: relative;
+    text-align: center;
+  }
+
   .effects-box {
     height: 80%;
     width: 60%;
@@ -29,6 +76,7 @@ body {
     padding: 10px;
     overflow: auto;
 }
+
 
 details {
     margin: 10px;
