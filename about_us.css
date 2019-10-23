@@ -76,7 +76,6 @@ aside > p {
 }
 
 @media print{
-    body {background-color: white;}
     aside {
            box-shadow: inset 5px 0 5px -5px black;
            font-style: normal;
