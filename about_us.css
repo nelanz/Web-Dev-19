@@ -1,9 +1,27 @@
 
-.about-us-box {
+body {
+    background:-webkit-radial-gradient(center,white, rgb(19, 172, 19));
+}
+/*.about-us-box {
     height: 70%;
     width: 60%;
     border-radius: 25px;
     background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    opacity: 0.75;
+    padding: 10px;
+}*/
+
+.about-us-box {
+    height: 70%;
+    width: 60%;
+    border-radius: 25px;
+    background:-webkit-gradient(linear,center top, center bottom, color-stop(70%, rgba(255,255,255,0.5)),color-stop(87%,rgba(78, 177, 78,0.5)),color-stop(95%,rgba(19, 172, 19,0.5)));
+    background:-moz-linear-gradient(top center,  rgba(255,255,255,0.5) 60%, rgb(78, 177, 78) 80%, rgb(19, 172, 19) 100%);
+    background:linear-gradient(top bottom,  rgba(255,255,255,0.5) 60%, rgb(78, 177, 78) 80%, rgb(19, 172, 19) 100%);
     position: absolute;
     left: 50%;
     top: 55%;
