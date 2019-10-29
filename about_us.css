@@ -1,7 +1,7 @@
-
 body {
-    background:-webkit-radial-gradient(center,white, rgb(19, 172, 19));
+    background: -webkit-radial-gradient(center, white, rgb(19, 172, 19));
 }
+
 /*.about-us-box {
     height: 70%;
     width: 60%;
@@ -19,9 +19,9 @@ body {
     height: 70%;
     width: 60%;
     border-radius: 25px;
-    background:-webkit-gradient(linear,center top, center bottom, color-stop(70%, rgba(255,255,255,0.5)),color-stop(87%,rgba(78, 177, 78,0.5)),color-stop(95%,rgba(19, 172, 19,0.5)));
-    background:-moz-linear-gradient(top center,  rgba(255,255,255,0.5) 60%, rgb(78, 177, 78) 80%, rgb(19, 172, 19) 100%);
-    background:linear-gradient(top bottom,  rgba(255,255,255,0.5) 60%, rgb(78, 177, 78) 80%, rgb(19, 172, 19) 100%);
+    background: -webkit-gradient(linear, center top, center bottom, color-stop(70%, rgba(255, 255, 255, 0.5)), color-stop(87%, rgba(78, 177, 78, 0.5)), color-stop(95%, rgba(19, 172, 19, 0.5)));
+    background: -moz-linear-gradient(top center, rgba(255, 255, 255, 0.5) 60%, rgb(78, 177, 78) 80%, rgb(19, 172, 19) 100%);
+    background: linear-gradient(top bottom, rgba(255, 255, 255, 0.5) 60%, rgb(78, 177, 78) 80%, rgb(19, 172, 19) 100%);
     position: absolute;
     left: 50%;
     top: 55%;
@@ -56,7 +56,7 @@ aside {
 
 #mail-pic {
     position: absolute;
-    left:54%;
+    left: 54%;
     height: 4wh;
     width: 4vw;
     border-radius: 10px;
@@ -83,21 +83,59 @@ aside {
     width: 40%;
     padding-left: .5rem;
     margin-left: .5rem;
-    float: right;
-    box-shadow: inset 5px 0 5px -5px  rgb(25, 201, 63);
+    float: left;
+    /* box-shadow: inset 5px 0 5px -5px  rgb(25, 201, 63); */
     font-style: italic;
-    color:  rgb(25, 201, 63);;
+    color: rgb(25, 201, 63);
+    ;
 }
 
-aside > p {
+aside>p {
     margin: .5rem;
 }
 
-@media print{
+@media print {
     aside {
-           box-shadow: inset 5px 0 5px -5px black;
-           font-style: normal;
-           color: black;
-           }
-    mark {background-color: yellow;}
- }
+        box-shadow: inset 5px 0 5px -5px black;
+        font-style: normal;
+        color: black;
+    }
+
+    mark {
+        background-color: yellow;
+    }
+}
+
+
+.some-columns {
+    -webkit-column-count: 2;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 2;
+    /* Firefox */
+    column-count: 2;
+
+    -webkit-column-gap: 20px;
+    /* Chrome, Safari, Opera */
+    -moz-column-gap: 20px;
+    /* Firefox */
+    column-gap: 20px;
+
+    -webkit-column-rule: 4px double rgb(3, 83, 3);
+    /* Chrome, Safari, Opera */
+    -moz-column-rule: 4px double rgb(3, 83, 3);
+    /* Firefox */
+    column-rule: 4px double rgb(3, 83, 3);
+
+}
+
+
+.shadow-element {
+    
+
+    width: 300px;
+    height: 100px;
+    background-color: rgb(183, 241, 168);
+    position: relative;
+    box-shadow: 10px 5px 5px green;
+    border-radius: 10px
+}

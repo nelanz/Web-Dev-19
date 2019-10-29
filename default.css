@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
 html {
   height: 100%;
 }
@@ -219,11 +223,32 @@ li {
   right: 5%;
 }
 
+.question-animation {
+  margin: 10px;
+  color: black;
+  font-family: 'Roboto', 'sans-serif';
+  font-size: 2vw;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%
+  }
+}
+
 .question {
   margin: 10px;
   color: black;
   font-family: 'Roboto', 'sans-serif';
-  font-size: 2vw
+  font-size: 2vw;
 }
 
 p {
