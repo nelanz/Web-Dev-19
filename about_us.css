@@ -106,7 +106,6 @@ aside>p {
     }
 }
 
-
 .some-columns {
     -webkit-column-count: 2;
     /* Chrome, Safari, Opera */
@@ -128,10 +127,7 @@ aside>p {
 
 }
 
-
 .shadow-element {
-    
-
     width: 300px;
     height: 100px;
     background-color: rgb(183, 241, 168);
