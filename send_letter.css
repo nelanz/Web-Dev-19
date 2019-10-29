@@ -16,7 +16,7 @@ body {
 }
 
 .send-letter-box {
-    height: 35%;
+    height: 50%;
     width: 60%;
     border-radius: 25px;
     background-color: white;
@@ -37,3 +37,15 @@ label {
 meter {
     width: 40%;
 }
+
+.hearts {
+    border: 20px solid pink;
+    border-image-source: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/652/hearts-border-image.png);
+    border-image-slice: 20 22;
+    border-image-repeat: round;
+    width: 54vw;
+    height: 12vh;
+    margin: auto;
+    float: center;
+    box-sizing: border-box;
+  }
