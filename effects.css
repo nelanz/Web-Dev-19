@@ -38,7 +38,9 @@ body {
   th,td{
      border: 1px solid whitesmoke;
   }
-
+ table tbody tr td{ 
+  height: 115px;
+}
 tr th{
   position:relative;
     width:7%;
@@ -77,6 +79,42 @@ tr th{
     overflow: auto;
 }
 
+
+.flexbox{
+  position: relative;
+  top:115%;
+  width:80%;
+  height:50%;
+  display:-webkit-box;
+  display:box;
+  -webkit-box-orient:horizontal;
+  box-orient:horizontal;
+  margin: 5% 10%;
+  
+  /*overflow: hidden;*/
+  
+}
+
+.flexbox:hover{margin: 5% 5%;}
+
+.flexbox>div{
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+  border:1px dotted red;
+  font-size:1em;
+  width:50%;
+  overflow: hidden;
+  -webkit-border-radius:10px;
+  border-radius:10px;
+}
+
+.flexbox>div:nth-child(1), .flexbox>div:nth-child(2){background-color: rgba(255,255,255,0.5);}
+.flexbox>div:hover{width:60%;color: white;}
+.flexbox>div:nth-child(1):hover{background-color: darkred;}
+.flexbox>div:nth-child(2):hover{background-color: black;overflow-y: scroll;}
+div p { overflow: hidden; font-family: "Rosario" }
+
+
 #cover{
   position:relative;
   margin: 0 auto;
@@ -85,11 +123,72 @@ tr th{
 #cover img{
   position: absolute;
   left:0;
+  top:0;
   max-width:100%;
-  -webkit-transition:opacity 3s ease-in-out;
-  transition: opacity 3s ease-in-out;
+  -webkit-transition:opacity 2s ease-in-out;
+  -moz-transition:opacity 2s ease-in-out;
+  -o-transition:opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
 }
 #cover img.top:hover{opacity:0;}
+
+#turn img{
+  -webkit-transition: -webkit-transform 2s;
+  -moz-transition: -moz-transform 2s;
+  -o-transition: -o-transform 2s;
+  transition: transform 2s;
+}
+#turn img:hover{
+-webkit-transform: rotate(720deg) scale(0.75,0.75) ;
+-moz-transform: rotate(720deg) scale(0.75,0.75) ;
+-o-transform: rotate(720deg) scale(0.75,0.75) ;
+transform: rotate(720deg) scale(0.75,0.75);
+}
+
+/*#skew {
+  -webkit-transition: -webkit-animation 2s;
+  -moz-transition: -moz-animation 2s;
+  -o-transition: -o-animation 2s;
+  transition: animation 2s;
+}*/
+#skew :hover{
+  -webkit-animation: skew linear 2s 1 normal ;
+  -moz-animation: skew linear 2s 1 normal;
+  -o-animation: skew linear 2s 1 normal;
+  animation: skew linear 2s 1 normal;
+}
+
+@-webkit-keyframes skew{
+  from{ -webkit-transform:  skewY(0deg);}
+  25%{-webkit-transform:  skewY(5deg);}
+  50%{-webkit-transform:  skewY(0deg);}
+  75%{-webkit-transform:  skewY(-5deg);}
+  to{-webkit-transform:  skewX(0deg);}
+}
+
+@-moz-keyframes skew{
+  from{ -webkit-transform:  skewY(0deg);}
+  25%{-webkit-transform:  skewY(5deg);}
+  50%{-webkit-transform:  skewY(0deg);}
+  75%{-webkit-transform:  skewY(-5deg);}
+  to{-webkit-transform:  skewX(0deg);}
+}
+
+@-o-keyframes skew{
+  from{ -webkit-transform:  skewY(0deg);}
+  25%{-webkit-transform:  skewY(5deg);}
+  50%{-webkit-transform:  skewY(0deg);}
+  75%{-webkit-transform:  skewY(-5deg);}
+  to{-webkit-transform:  skewX(0deg);}
+}
+
+@keyframes skew{
+  from{ -webkit-transform:  skewY(0deg);}
+  25%{-webkit-transform:  skewY(5deg);}
+  50%{-webkit-transform:  skewY(0deg);}
+  75%{-webkit-transform:  skewY(-5deg);}
+  to{-webkit-transform:  skewX(0deg);}
+}
 
 details {
     margin: 10px;
