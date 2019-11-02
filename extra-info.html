@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
 
+  <script src="/script.js"></script>
+
   <title>Poznajmy się</title>
 </head>
 
@@ -96,7 +98,10 @@
     </ul>
   </nav>
   <div class="extra-info-box">
+    
     <h1 class="question">Opowiedz nam o sobie - poznajmy się lepiej</h1>
+    <button id="funky-button" onclick="promptFunction()">👆🏻</button>
+    <p id="name" class="question" style="color: white"></p>
 
 
     <!--<style>
@@ -144,7 +149,7 @@
 
 
       <p>
-        <input type="reset" value="Wyczyść">
+          <input onclick="alertFunction()" type="reset" value="Wyczyść">
         <input type="submit" value="Prześlij">
       </p>
 
