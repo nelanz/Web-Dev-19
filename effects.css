@@ -82,7 +82,7 @@ tr th{
 
 .flexbox{
   position: relative;
-  top:140%;
+  top:130%;
   width:80%;
   height:50%;
   display:-webkit-box;
@@ -90,9 +90,6 @@ tr th{
   -webkit-box-orient:horizontal;
   box-orient:horizontal;
   margin: 5% 10%;
-  
-  /*overflow: hidden;*/
-  
 }
 
 .flexbox:hover{margin: 5% 5%;}
@@ -101,6 +98,7 @@ tr th{
   -webkit-transition: 1s ease-out;
   transition: 1s ease-out;
   border:1px dotted red;
+  font-family: Roboto, sans-serif;
   font-size:1em;
   width:50%;
   overflow: hidden;
@@ -189,6 +187,17 @@ transform: rotate(720deg) scale(0.75,0.75);
   75%{-webkit-transform:  skewY(-5deg);}
   to{-webkit-transform:  skewX(0deg);}
 }
+
+#quest{
+  position:relative;
+  top:210%;
+  height:4em;
+  width:95%;
+  font-family:Roboto,sans-serif;
+  text-align:center;
+  }
+
+
 
 details {
     margin: 10px;

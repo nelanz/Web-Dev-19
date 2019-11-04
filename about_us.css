@@ -79,6 +79,25 @@ footer {
     opacity: 0.7;
 }
 
+#first_step{
+    position: absolute;
+    bottom:3em;
+    height:3em;
+    width:100%;
+    font-size:1em;
+    text-align: center;
+    text-shadow:  -2px 2px 1px green;
+    color: white;
+    font-family: Roboto, sans-serif;
+    bottom: translate(0,1em);
+}
+
+#clicker{
+    background-color: transparent;
+    font-size: 1.5em;
+    border:none;
+}
+
 aside {
     width: 40%;
     padding-left: .5rem;
