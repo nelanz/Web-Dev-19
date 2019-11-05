@@ -13,6 +13,21 @@
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
 
   <title>Skutki</title>
+
+  <script>
+
+    function question(){
+      var checkBoxy = document.getElementById("knowY");
+      var checkBoxn = document.getElementById("knowN");
+      var texty=document.getElementById("texty");
+      var textn=document.getElementById("textn");
+      if(checkBoxy.checked == true){ texty.style.display="block"; textn.style.display="none";}
+      else if (checkBoxn.checked==true){textn.style.display="block"; texty.style.display="none";}
+      else {textn.style.display="none"; texty.style.display="none";}
+    }
+    
+    </script>
+
 </head>
 
 <body>
@@ -193,6 +208,22 @@
         </tr>
       </tbody>
     </table>
+    
+    <div id="quest">
+          <strong>Chciał(a)byś dowiedzieć się więcej?</strong><br>
+          <label>Tak
+            <input name="wish" id="knowY" type="radio" value="Tak" onclick="question()">
+          </label>
+          <label>Nie
+            <input name="wish" id="knowN" type="radio" value="Nie" onclick="question()">
+          </label>
+            <div id="texty" style="display:none; bottom:5px;"> Polecamy strony <a href="https://www.greenpeace.org/poland/">greenpeace</a>
+               oraz <a href="https://www.wwf.pl/zagrozone-gatunki">wwf</a>, a także książki: <br>
+              <li><em>The Ends of the World</em> Petera Brannena</li> 
+                <li><em>The Uninhabitable Earth</em> Davida Wallace-Wellsa</li><br></div>
+            <div id="textn" style="display:none;">W takim razie zapraszamy na nasze pozostałe strony😊<br></div>
+        </div>
+ 
     <div class="flexbox">
       <div><p>„Według szacunków niektórych naukowców, żeby Ziemia mogła funkcjonować w miarę normalnie i żeby to,
          co jest w stanie wyprodukować, mogło być skonsumowane przez ludzi bez dużego uszczerbku dla jej funkcjonowania,
@@ -200,8 +231,13 @@
       <div><p>Badania na owadach przeprowadzone w Niemczech czy we Francji wskazują, że w ciągu ostatnich 30 lat populacje
          tych bezkręgowców, czyli organizmów m.in. zapylających rośliny, w tym takich, które są użytkowane przez człowieka
          (dzięki nim mamy np. jabłka, pomidory czy owoce cytrusowe), w niektórych regionach zmniejszyła się nawet o 70 proc.<br>
-         "Jeżeli będą wymierać owady odpowiadające za zapylanie roślin, stanowiących przecież główne źródło pokarmu dla ludzi i wielu gatunków zwierząt, 
-         będzie to skutkowało stopniowym, ale drastycznym pogarszaniem się warunków dla człowieka, szczególnie w takich miejscach, gdzie zaludnienie jest duże”</p></div>
+         "Jeżeli będą wymierać owady odpowiadające za zapylanie roślin, stanowiących przecież główne źródło pokarmu dla ludzi 
+         i wielu gatunków zwierząt, będzie to skutkowało stopniowym, ale drastycznym pogarszaniem się warunków dla człowieka,
+         szczególnie w takich miejscach, gdzie zaludnienie jest duże”</p></div>
+      </div>
+
+      
+      
     </div>
   </div>
 </body>
