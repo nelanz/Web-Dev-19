@@ -86,8 +86,8 @@ footer {
     width:100%;
     font-size:1em;
     text-align: center;
-    text-shadow:  -2px 2px 1px green;
-    color: white;
+    text-shadow:  -2px 2px 1px white;
+    color: darkblue;
     font-family: Roboto, sans-serif;
     bottom: translate(0,1em);
 }
