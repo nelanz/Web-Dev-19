@@ -15,7 +15,7 @@
 
     <script src="/script.js"></script>
 
-    <title>Wyślij list</title>
+    <title>Wesprzyj nas</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
             <li><a href="/about_us.html">O nas</a></li>
             <li><a href="/extra-info.html">Poznajmy się</a></li>
             <li><a href="/solutions.html">Wypełnij ankietę</a></li>
-            <li><a href="/send_letter.html">Wyślij list</a></li>
+            <li><a href="/send_letter.html">Wesprzyj nas</a></li>
             <li><a href="/effects.html">Skutki</a></li>
             <li><a href="#">Nasze produkty
                     <span class="drop-icon">▾</span>
@@ -100,10 +100,28 @@
     </nav>
     <div class="send-letter-box">
 
-        <h1 class="question">Pobierz list, wyślij i zmieniaj z nami świat!</h1>
+        <h1 class="question">Przekaż wsparcie na walkę ze zmianą klimatu!</h1>
         <br>
+        <div class="grid-container">
+            <div class="item-a">
+                <h2 class="donation-text">Kwota do przekazania:</h2>
+            </div>
+            <div class="item-b">
+                <form name="form">
+                    <input type="text" id="donation" name="donation" value="" required />
+                </form>
+            </div>
+            <div style="mergin-left: 60%; margin-top: 2%">
+                <button class="big-button" onclick="addDonation()">Przekaż donację</button>
+            </div>
+        </div>
+        <div style="text-align: left">
+            <h2 id="display-donation" class="donation-text"></h2>
+            <button class="big-button" onclick="getDonators()">Zobacz listę otrzymanych donacji</button>
+        </div>
+        <p id="donations-list"></p>
 
-        <div style="text-align: center">
+        <!-- <div style="text-align: center">
             <a class="link-to-letters"
                 href="https://friendsofscience.org/assets/documents/Open%20Letter%20to%20the%20World%20on%20Climate%20Change.pdf"
                 download>📨List do świata</a>
@@ -113,14 +131,14 @@
                 href="https://www.pah.org.pl/app/uploads/2017/09/2017_Zmiany_klimatyczne_impas_i_perspektywy.pdf"
                 download>🧐Dowiedz się więcej</a>
             <br>
-        </div>
-        <br>
+        </div> -->
+        <!-- <br>
         <div class="hearts">
             <label for="letters">Liczba osób, które pobrały list:</label>
             <meter id="letters" min="0" max="1000" value="100">
                
             </meter>
-        </div>
+        </div> -->
 
     </div>
 </body>
