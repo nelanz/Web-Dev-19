@@ -11,30 +11,11 @@
     <link rel="stylesheet" href="about_us.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
-
+    <title>O nas</title>    
     <script src="/script.js"></script>
-
-    <title>O nas</title>
-
-    <script>
-
-        var rand=((Math.random()* (100 - 40)) + 40);
-        
-        function actionList(){
-            var event=document.getElementById("clicker").addEventListener("click",listen,false);
-        }
-        
-        function listen(){
-            document.getElementById("suggestion").innerHTML = "Pomożemy Ci wyznaczyć cel - spróbuj w tym roku przeznaczyć "
-            +parseInt(rand)+ "zł na rekompensatę Twojego śladu węglowego."; 
-        }
-
-        window.addEventListener("load",actionList,false);
-
-    </script>
 </head>
 
-<body>
+<body >
     <div class="content-wrap">
         <a class="home-link" href="/home.html">
             <h1 class="title">🌎EcoConscious</h1>
@@ -139,9 +120,11 @@
         
            <div id="first_step">
              <label>Pierwszy krok do zmiany nawyków ->
-                <button id="clicker">🐾</button></label>
+                <button id="clicker" >🐾</button></label>
              <p id="suggestion" style="font-size: 1em;"></p>
+             <p id="sug2" style="font-size: 1em;"></p>
             </div>
+
         </div>
     </div>
 
