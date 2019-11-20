@@ -1,8 +1,19 @@
 var donationList = [5, 10, 25, 16, 40];
 
 function alertFunction() {
-    alert('Uwaga formularz zostanie wyczyszczony!')
+    alert('Uwaga formularz zostanie wyczyszczony!');
 }
+
+// funkcja do przesylania jak ominac submit?
+function confirmSendFunction() {
+    if(confirm('Jestes pewny ze chcesz wyslac formularz?')) {
+        console.log('yes')
+    } else {
+        console.log('no');
+    }
+}
+
+
 
 function promptFunction() {
     var person = prompt("Podaj swoje imie", "anonimowy ekologu");
@@ -15,7 +26,8 @@ window.addEventListener( "load", start, false );
 
 
 var rand=((Math.random()* (100 - 40)) + 40);
-        
+
+// to sypie błędem - patrz konsole na stronie
 function start(){
     var event=document.getElementById("clicker").addEventListener("mousedown",listen,false);
 }
@@ -105,4 +117,3 @@ function getDonators() {
 //         document.getElementById("name").disabled = false;
 //     }
 // }
-

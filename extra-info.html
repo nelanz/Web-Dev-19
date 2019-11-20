@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
 
   <script src="/script.js"></script>
+  <script src="forms.js"></script>
 
   <title>Poznajmy się</title>
 </head>
@@ -111,9 +112,12 @@
       }
     </style>-->
 
-    <form method="POST" action="home.html">
-      <input type="hidden" name="recipient" value="n.tomaszewicz@gmail.com">
-      <input type="hidden" name="subject" value="Extra Info">
+    <!-- <form id ="form1" method="POST" action="home.html"> -->
+      <form id="form1">
+      <!-- <input type="hidden" name="recipient" value="n.tomaszewicz@gmail.com">
+      <input type="hidden" name="subject" value="Extra Info"> -->
+      <input type="text">
+      
 
 
       <p>
@@ -131,13 +135,15 @@
 
       <p>
         <label><strong>Strona, która najbardziej Cię inspiruje: &nbsp;&nbsp;</strong>
-          <input type="url" placeholder="ecoconscious.pl" maxlength="50" />
+          <input  id="url" type="url" style= "display:inline" placeholder="ecoconscious.pl" maxlength="50" />
+          <p id="url-info"></p>
         </label>
       </p>
 
       <p>
-        <label><strong>Ublubione zwierzę: &nbsp;&nbsp;</strong>
-          <input type="search" placeholder="zwierzę" />
+        <label><strong>Ulubione zwierzę: &nbsp;&nbsp;</strong>
+          <input id="search" type="search" placeholder="zwierzę" />
+          <p id="search-info"></p>
         </label>
       </p>
 
@@ -150,7 +156,7 @@
 
       <p>
           <input onclick="alertFunction()" type="reset" value="Wyczyść">
-        <input type="submit" value="Prześlij">
+        <input onclick="confirmSendFunction()" type="submit" value="Prześlij">
       </p>
     
     </form>
