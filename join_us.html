@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="join_us.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
-
+  <script src="/join_us.js"></script>
   <title>Dołącz do nas</title>
 </head>
 
@@ -99,14 +99,8 @@
     <h1 class="question">Chcesz do nas dołączyć? Zacznij działać już dziś 😊</h1>
 
 
-    <!-- <style>
-      td,
-      th {
-        border: 1px solid whitesmoke;
-      }
-    </style>-->
 
-    <form method="POST" autocomplete="on" action="home.html">
+    <form id="Forma" method="POST" autocomplete="on" action="home.html">
       <input type="hidden" name="recipient" value="n.tomaszewicz@gmail.com">
       <input type="hidden" name="subject" value="Sign up">
 
@@ -146,7 +140,7 @@
 
       <p>
         <label><strong>*Adres e-mail: &nbsp;&nbsp;</strong>
-          <input type="email" placeholder="email@domena.pl" maxlength="50" required />
+          <input type="email" id="email" placeholder="email@domena.pl" maxlength="50" required />
           &nbsp;&nbsp;(nazwa@domena.pl, max.50 znaków)
         </label>
       </p>
@@ -159,8 +153,10 @@
       </p>
 
       <p>
-        <input type="reset" value="Wyczyść">
-        <input type="submit" value="Prześlij">
+          <input type="button" onclick="ResetButton()" value="Wyczyść">
+        <!--<input type="reset" value="Wyczyść">-->
+        <input type="button" onclick="SubmitButton()" value="Prześlij">
+        <!--<input type="submit" value="Prześlij"> -->
       </p>
 
     </form>
