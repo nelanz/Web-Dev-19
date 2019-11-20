@@ -12,20 +12,20 @@ body {
     padding: 0;
 }
 
-  body {
-      font-family: 'Roboto', 'sans-serif';
-      
-  }
+body {
+    font-family: 'Roboto', 'sans-serif';
+}
 
-  p{
-      font-size:1.2em;
-  }
-  label input{
-      position: relative;
-      size:50%;
-  }
+p {
+    font-size: 1.2em;
+}
 
-  .extra-info-box {
+label input {
+    position: relative;
+    size: 50%;
+}
+
+.extra-info-box {
     height: 50%;
     width: 60%;
     border-radius: 25px;
@@ -47,4 +47,16 @@ body {
     font-family: 'Roboto', 'sans-serif';
     font-size: 2vw;
     padding: 5px 30px;
+}
+
+#search-info {
+    font-size: 15px;
+    color: white;
+    font-style: italic
+}
+
+#url-info {
+    font-size: 15px;
+    color: white;
+    font-style: italic
 }

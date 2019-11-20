@@ -270,3 +270,9 @@ a.home-link {
   font-weight: 700;
   font-variant: inherit;
 }
+
+#game-link {
+  color: green;
+  text-decoration: none;
+  font-weight: bold;
+}
