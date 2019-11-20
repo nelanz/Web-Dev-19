@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', domloaded, false);
 
 function domloaded() {
     // uzywamy tutaj canvas API
-    var canvas = document.getElementById('canvas');
+    var canvas = document.getElementById('canvas'); // kontener na grafikę rysowana jsem
     var context = canvas.getContext('2d') // context to wrtość this odnoszacego sie do konkretnego obiektu. Tutaj do obiektu canvas bedacego tablica 2d 
 
     var score = 0;
