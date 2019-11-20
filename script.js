@@ -22,10 +22,13 @@ function promptFunction() {
     }
 }
 
+var rand=((Math.random()* (100 - 40)) + 40);
+
+/*
 window.addEventListener( "load", start, false );
 
 
-var rand=((Math.random()* (100 - 40)) + 40);
+
 
 // to sypie błędem - patrz konsole na stronie
 function start(){
@@ -60,7 +63,8 @@ function changeColor(){
     for(var i=0;i<lista.length;i++){
     (lista.item(i)).style.color = inputColor1;
     }
-}
+} 
+*/
 
 function question() {
     var checkBoxy = document.getElementById("knowY");
