@@ -22,7 +22,7 @@ session_start();
 
 <body>
     <div class="content-wrap">
-        <a class="home-link" href="home.html">
+        <a class="home-link" href="home.php">
             <h1 class="title">🌎EcoConscious</h1>
         </a>
         <nav id="menu">
