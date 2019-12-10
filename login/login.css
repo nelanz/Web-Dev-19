@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background-image: url(images/planet-earth.jpg);
+  background-image: url(../images/planet-earth.jpg);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -207,7 +207,8 @@ li {
   height: 50%;
   width: 60%;
   border-radius: 25px;
-  background-color:transparent;
+  background-color: white;
+  opacity: 0.8;
   position: absolute;
   left: 50%;
   top: 55%;
@@ -222,32 +223,13 @@ li {
   right: 5%;
 }
 
-.question-animation {
-  margin: 10px;
+.log-title {
+  margin-top: 5%;
+  margin-bottom: 0;
   color: black;
   font-family: 'Roboto', 'sans-serif';
   font-size: 2vw;
-  animation-duration: 3s;
-  animation-name: slidein;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 100%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%
-  }
-}
-
-.question {
-  margin: 10px;
-  color: black;
-  font-family: 'Roboto', 'sans-serif';
-  font-size: 2vw;
+  text-align: center
 }
 
 p {
@@ -265,15 +247,28 @@ a.home-link {
   margin-left: 0
 }
 
-#text-options {
-  font-weight: 700;
-  font-variant: inherit;
+
+.form-style {
+    text-align: center;
+    size: 50%;
+    margin-top: 5%
 }
 
-#shop-title {
-  color: white;
-  font-family: 'Amatic SC';
-  font-stretch: 250%;
-  font-size: 5vw;
-  text-align: center;
+.field {
+    width: 30%;
+    font-size: 4vh
+    
 }
+
+.welcome-text {
+  margin-top: 5%;
+  margin-bottom: 0;
+  color: black;
+  font-family: 'Roboto', 'sans-serif';
+  font-size: 3vw;
+  text-align: center
+}
+
+/* .submit-button {
+
+} */
