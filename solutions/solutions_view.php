@@ -3,30 +3,32 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="keywords" content="zgłoszenie, problem, zmiany klimatu, ekologia, globalne ocieplenie">
+  <meta name="keywords" content="ankieta, problem, zmiany klimatu, ekologia, globalne ocieplenie">
   <meta name="author" content="Nela Tomaszewicz & Agata Rudzka">
-  <meta name="description" content="Dołącz do nas i pomóż nam zmieniać świat.">
+  <meta name="description" content="Wypelnij ankietę aby mieć aktywny wpływ na walkę o ziemię.">
 
   <link rel="stylesheet" href="default.css">
-  <link rel="stylesheet" href="join_us.css">
+  <link rel="stylesheet" href="solutions.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
 
-  <title>Dołącz do nas</title>
+  <script src="/script.js"></script>
+
+  <title>Wyniki ankiety</title>
 </head>
 
 <body>
-  <a class="home-link" href="home.html">
+  <a class="home-link" href="/home.html">
     <h1 class="title">🌎EcoConscious</h1>
   </a>
   <nav id="menu">
     <input type="checkbox" id="tm">
     <ul class="main-menu clearfix">
-      li><a href="about_us.html">O nas</a></li>
-                <li><a href="extra-info/extra-info.php">Poznajmy się</a></li>
-                <li><a href="solutions/solutions.php">Wypełnij ankietę</a></li>
-                <li><a href="send_letter.html">Wesprzyj nas</a></li>
-                <li><a href="effects.html">Skutki</a></li>
+      <li><a href="/about_us.html">O nas</a></li>
+      <li><a href="/extra-info.html">Poznajmy się</a></li>
+      <li><a href="/solutions.html">Wypełnij ankietę</a></li>
+      <li><a href="/send_letter.html">Wesprzyj nas</a></li>
+      <li><a href="/effects.html">Skutki</a></li>
       <li><a href="#">Nasze produkty
           <span class="drop-icon">▾</span>
           <label title="Toggle Drop-down" class="drop-icon" for="sm1">▾</label>
@@ -95,81 +97,12 @@
       </li>
     </ul>
   </nav>
-  <div class="join-us-box">
-    <h1 class="question">Chcesz do nas dołączyć? Zacznij działać już dziś 😊</h1>
+  <div class="solutions-box">
 
+    <p><?= $tresc ?></p>
 
-    <!-- <style>
-      td,
-      th {
-        border: 1px solid whitesmoke;
-      }
-    </style>-->
-
-    <form method="POST" autocomplete="on" action="home.html">
-      <input type="hidden" name="recipient" value="n.tomaszewicz@gmail.com">
-      <input type="hidden" name="subject" value="Sign up">
-
-      <p>
-        <label><strong>Imię: &nbsp;&nbsp;</strong>
-          <input type="text" id="name" placeholder="Imię" maxlength="15" autofocus />
-          &nbsp;&nbsp;(Text, max.15 znaków)
-        </label>
-      </p>
-
-      <p>
-        <label><strong>*Nazwisko: &nbsp;&nbsp;</strong>
-          <input type="text" id="surname" placeholder="Nazwisko" maxlength="30" required />
-          &nbsp;&nbsp;(Text, max.30 znaków)
-        </label>
-      </p>
-
-      <p>
-        <label for="txtList"><strong>Miesiąc urodzin: &nbsp;&nbsp;</strong>
-          <input type="text" id="txtList" placeholder="Nazwa miesiąca" list="months" />
-          <datalist id="months">
-            <option value="Styczeń"></option>
-            <option value="Luty"></option>
-            <option value="Marzec"></option>
-            <option value="Kwiecień"></option>
-            <option value="Maj"></option>
-            <option value="Czerwiec"></option>
-            <option value="Lipiec"></option>
-            <option value="Sierpień"></option>
-            <option value="Wrzesień"></option>
-            <option value="Październik"></option>
-            <option value="Listopad"></option>
-            <option value="Grudzień"></option>
-          </datalist>&nbsp;&nbsp;(Słownie-miesiąc urodzenia, np.: Styczeń)
-        </label>
-      </p>
-
-      <p>
-        <label><strong>*Adres e-mail: &nbsp;&nbsp;</strong>
-          <input type="email" placeholder="email@domena.pl" maxlength="50" required />
-          &nbsp;&nbsp;(nazwa@domena.pl, max.50 znaków)
-        </label>
-      </p>
-
-      <p>
-        <label><strong>Telefon: &nbsp;&nbsp;</strong>
-          <input type="tel" placeholder="###-###-###" pattern="\d{3}-\d{3}-\d{3}" />
-          &nbsp;&nbsp;(np.: 123-456-789)
-        </label>
-      </p>
-
-      <p>
-        <input type="reset" value="Wyczyść">
-        <input type="submit" value="Prześlij">
-      </p>
-
-    </form>
-
-    <footer>
-      <p><em>Pola oznaczone * są obowiązkowe</em></p>
-    </footer>
   </div>
-</body>
-
+  </body>
 
 </html>
+
