@@ -31,11 +31,13 @@ session_start();
             <?php
                 if(isset($_SESSION['user_id'])) {
                     echo '<li><a href="login/logout.php" style="color: yellow">Wyloguj</a></li>';
+                    echo '<li><a href="login/my_account.php">Moje konto</a></li>';
+                    echo '<li><a href="#">Koszyk</a></li>';
                 } else {
                     echo '<li><a href="login/login.php" style="color: yellow">Logowanie</a></li>';
                 }
             ?>
-                <li><a href="about_us.html">O nas</a></li>
+                <li><a href="about_us/about_us.php">O nas</a></li>
                 <li><a href="solutions/solutions.php">Wypełnij ankietę</a></li>
                 <li><a href="#">Nasze produkty</a></li>
             </ul>

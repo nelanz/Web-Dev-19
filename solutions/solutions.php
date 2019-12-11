@@ -1,3 +1,9 @@
+<?php
+require_once('../login/config.php');
+require_once('../login/functions.php');
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -18,42 +24,60 @@
 </head>
 
 <body>
-<?php
-$yearErr = "";
-// $year = "";
+  <?php
+  $yearErr = "";
+  // $year = "";
 
-// if($_SERVER["REQUEST_METHOD"] == "POST") {
-//   if (empty($_POST["year"])) {
-//     $yearErr = "Rok jest wymagany";
-//   } else {
-//     $year = test_input($_POST["year"]);
-//   }
-// }
-
-
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
+  // if($_SERVER["REQUEST_METHOD"] == "POST") {
+  //   if (empty($_POST["year"])) {
+  //     $yearErr = "Rok jest wymagany";
+  //   } else {
+  //     $year = test_input($_POST["year"]);
+  //   }
+  // }
 
 
-?>
-<a class="home-link" href="../home.php">
+
+  function test_input($data)
+  {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+
+
+  ?>
+  <a class="home-link" href="../home.php">
     <h1 class="title">🌎EcoConscious</h1>
   </a>
   <nav id="menu">
     <input type="checkbox" id="tm">
     <ul class="main-menu clearfix">
-    <li><a href="../about_us.html">O nas</a></li>
+      <?php
+      if (isset($_SESSION['user_id'])) {
+        echo '<li><a href="../login/logout.php" style="color: yellow">Wyloguj</a></li>';
+        echo '<li><a href="../login/my_account.php">Moje konto</a></li>';
+        echo '<li><a href="#">Koszyk</a></li>';
+      } else {
+        echo '<li><a href="../login/login.php" style="color: yellow">Logowanie</a></li>';
+      }
+      ?>
+      <li><a href="../about_us/about_us.php">O nas</a></li>
       <li><a href="solutions.php">Wypełnij ankietę</a></li>
       <li><a href="#">Nasze produkty</a></li>
     </ul>
   </nav>
   <div class="solutions-box">
-    <h1 class="question">Wypełnij ankietę i miej swój wkład w ratowanie planety!</h1>
+    <?php
+    if (!isset($_SESSION['user_id'])) {
+      echo '<h1 class="question">Wypełnij ankietę i miej swój wkład w ratowanie planety!</h1>';
+    } else {
+      $user_id = $_SESSION['user_id'];
+      $user = in_array_r($user_id, $users);
+      echo '<h1 class="question">' . $user['username'] . '! Wypełnij ankietę i miej swój wkład w ratowanie planety!' . "</h1>";
+    }
+    ?>
 
 
     <!-- <style>
@@ -64,13 +88,13 @@ function test_input($data) {
     </style>-->
 
     <form method="POST" action="./solutions_data.php">
-     <!-- <input type="hidden" name="recipient" value="n.tomaszewicz@gmail.com">
+      <!-- <input type="hidden" name="recipient" value="n.tomaszewicz@gmail.com">
       <input type="hidden" name="subject" value="Questionaire">-->
 
       <p>
         <strong style="color: darkorange">Płeć &nbsp;&nbsp;</strong><br>
         <label>Kobieta
-          <input name="sex" type="radio" value="K" >
+          <input name="sex" type="radio" value="K">
         </label>
         <label>Mężczyzna
           <input name="sex" type="radio" value="M" checked>
@@ -80,10 +104,10 @@ function test_input($data) {
       <p>
         <strong style="color: darkorange">Czy wierzysz w globalne ocieplenie? &nbsp;&nbsp;</strong><br>
         <label>Tak
-          <input name="belief" type="radio" value="tak" >
+          <input name="belief" type="radio" value="tak">
         </label>
         <label>Nie
-          <input name="belief" type="radio" value="nie" >
+          <input name="belief" type="radio" value="nie">
         </label>
         <label>Nie wiem
           <input name="belief" type="radio" value="Nie wiem" checked>
@@ -132,7 +156,7 @@ function test_input($data) {
         </label><br>
         <label>Ograniczenie lotów
           <input name="solution[]" type="checkbox" value="Ograniczenie lotów">
-        </label> 
+        </label>
         <label>Powrót do kupna tylko lokalnych produktów
           <input name="solution[]" type="checkbox" value="Powrót do kupna tylko lokalnych produktów">
         </label><br>
@@ -171,23 +195,20 @@ function test_input($data) {
           <input name="year" type="year" maxlength="4">
         </label>
         <?php //echo $year
-        ?> 
-        <?php
-        if(isset( $_POST['year'])){
-        $year = $_POST['year'];
-        if(!preg_match('#[^0-9]#',$year))
-        {
-            echo "Value is numeric";
-        }
-        else
-        {
-            echo "Value not numeric";
-        }
-      }
         ?>
-        
+        <?php
+        if (isset($_POST['year'])) {
+          $year = $_POST['year'];
+          if (!preg_match('#[^0-9]#', $year)) {
+            echo "Value is numeric";
+          } else {
+            echo "Value not numeric";
+          }
+        }
+        ?>
+
       </p>
-     
+
 
 
       <p>
