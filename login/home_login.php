@@ -23,8 +23,9 @@
             <input type="checkbox" id="tm">
             <ul class="main-menu clearfix">
                 <li><a href="./logout.php" style="color: yellow">Wyloguj się</a></li>
+                <li><a href="./my_account.php">Moje konto</a></li>
                 <li><a href="#">Koszyk</a></li>
-                <li><a href="../about_us.html">O nas</a></li>
+                <li><a href="../about_us/about_us.php">O nas</a></li>
                 <li><a href="../solutions/solutions.php">Wypełnij ankietę</a></li>
                 <li><a href="#">Nasze produkty</a></li>      
             </ul>
