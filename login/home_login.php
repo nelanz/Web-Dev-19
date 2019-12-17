@@ -1,3 +1,6 @@
+<?php session_start(); ?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -10,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="../register/form.css">
 
     <title>Home</title>
 </head>
@@ -31,18 +35,19 @@
             </ul>
         </nav>
         <div class="box" style="background-color: <?php print isset($_COOKIE["colorcloud"]) ? $_COOKIE["colorcloud"]:"white"?>; color: <?php print isset($_COOKIE["color"]) ? $_COOKIE["color"]:"black"?>; overflow:auto">
-            <div style="margin-top:10%">
-                <h1 class="welcome-text">Witaj <?php echo $user['username']; ?>!</h1>
+            <div style="margin-top:10%"> 
+                <div><img src="<?= print $_SESSION['avatar']?>" style="width:20%"></div> <!--nie moze wyswietlic zdjecia chociaz wie gdzie powinno byc i ze jest w folderze-->
+                <h1 class="welcome-text">Witaj <?php echo $_SESSION['username'] ?>!</h1> <!--echo $user['username'];-->
                 <p style="font-size: <?php print isset($_COOKIE["size"]) ? $_COOKIE["size"]:"1" ?>em; text-align:center">Zrób zakupy w naszym sklepie i pokaż światu jak o dbasz o środowisko 💚</p>
             </div>
-
+            <button class="edit_data" onclick="window.location.href='../register/form.php'">Edytuj dane</button>
 
         </div>
     </div>
 
 </body>
 
-<footer >
+<footer style="color:black; height:55px">
 <form method = "post" action = "./cookies.php">
 <div style="font-size:1em; line-height:30px;">Ustaw swoje ciasteczka🍪:</div>
 
@@ -50,10 +55,10 @@
 <span id="demo"></span>em
 
 <label >&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Kolor tekstu(eng.):
-<input type = "text" name = "color"></label>
+<input type = "text" name = "color" style="width:15%; height:20px;"></label>
 
 <label>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Kolor tła chmury(eng.):
-<input type = "text" name = "colorcloud">&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<input type = "text" name = "colorcloud" style="width:15%; height:20px;">&nbsp;&nbsp;&nbsp;&nbsp;</label>
 
 <input style="background-color:#4CAF50; border: 1px solid; border-radius:12px; line-color: green; color:white" type="submit" value="Zapisz ciasteczko"></div>
 
