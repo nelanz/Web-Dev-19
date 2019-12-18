@@ -39,7 +39,7 @@
                 <h1 class="welcome-text">Witaj <?php echo $_SESSION['username'] ?>!</h1> <!--echo $user['username'];-->
                 <p style="font-size: <?php print isset($_COOKIE["size"]) ? $_COOKIE["size"]:"1" ?>em; text-align:center">Zrób zakupy w naszym sklepie i pokaż światu jak o dbasz o środowisko 💚</p>
             </div>
-            <button class="edit_data" onclick="window.location.href='../register/form.php'">Edytuj dane</button>
+            <button class="edit_data" onclick="window.location.href='../register/test.php'">Test bazy</button>
 
         </div>
     </div>
