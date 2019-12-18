@@ -1,6 +1,4 @@
 <?php
-require_once('./login/config.php');
-require_once('./login/functions.php');
 session_start();
 ?>
 <!DOCTYPE html>
@@ -29,7 +27,7 @@ session_start();
             <input type="checkbox" id="tm">
             <ul class="main-menu clearfix">
             <?php
-                if(isset($_SESSION['user_id'])) {
+                if(isset($_SESSION['loggedin'])) {
                     echo '<li><a href="login/logout.php" style="color: yellow">Wyloguj</a></li>';
                     echo '<li><a href="login/my_account.php">Moje konto</a></li>';
                     echo '<li><a href="#">Koszyk</a></li>';
@@ -37,6 +35,7 @@ session_start();
                     echo '<li><a href="login/login.php" style="color: yellow">Logowanie</a></li>';
                 }
             ?>
+                <li><a href="register/register.php">Rejestracja</a></li>
                 <li><a href="about_us/about_us.php">O nas</a></li>
                 <li><a href="solutions/solutions.php">Wypełnij ankietę</a></li>
                 <li><a href="#">Nasze produkty</a></li>
@@ -44,12 +43,10 @@ session_start();
         </nav>
         <div class="box">
             <?php
-                if(!isset($_SESSION['user_id'])) {
+                if(!isset($_SESSION['loggedin'])) {
                     echo '<h1 id="shop-title">Kupuj świadomie. Ziemia jest tylko jedna.</h1>';
                 } else {
-                    $user_id = $_SESSION['user_id'];
-                    $user = in_array_r($user_id, $users);
-                    echo '<h1 id="shop-title">'.'Witaj '.$user['username']. '! Zapraszamy na zakupy!'."</h1>";
+                    echo '<h1 id="shop-title">'.'Witaj '.$_SESSION['username']. '! Zapraszamy na zakupy!'."</h1>";
                 }
             ?>
         </div>
