@@ -125,7 +125,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" value="Zaloguj">
                 </div>
-                <p style="text-align:center">Nie masz konta? <a href="../register/register.php">Zarejestruj się</a>.</p>
+                <?php
+                echo "<p style='text-align:center'." . ">" . "</p>Nie masz konta?" . "<a href=" . "../register/register.php" . ">" . "Zarejestruj się</a>.</p>";
+                ?>
             </form>
         </div>
 
