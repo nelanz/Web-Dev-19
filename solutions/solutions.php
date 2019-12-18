@@ -1,6 +1,4 @@
 <?php
-require_once('../login/config.php');
-require_once('../login/functions.php');
 session_start();
 ?>
 
@@ -26,17 +24,6 @@ session_start();
 <body>
   <?php
   $yearErr = "";
-  // $year = "";
-
-  // if($_SERVER["REQUEST_METHOD"] == "POST") {
-  //   if (empty($_POST["year"])) {
-  //     $yearErr = "Rok jest wymagany";
-  //   } else {
-  //     $year = test_input($_POST["year"]);
-  //   }
-  // }
-
-
 
   function test_input($data)
   {
@@ -46,7 +33,6 @@ session_start();
     return $data;
   }
 
-
   ?>
   <a class="home-link" href="../home.php">
     <h1 class="title">🌎EcoConscious</h1>
@@ -55,7 +41,7 @@ session_start();
     <input type="checkbox" id="tm">
     <ul class="main-menu clearfix">
       <?php
-      if (isset($_SESSION['user_id'])) {
+      if (isset($_SESSION['loggedin']) || $_SESSION["loggedin"] == true) {
         echo '<li><a href="../login/logout.php" style="color: yellow">Wyloguj</a></li>';
         echo '<li><a href="../login/my_account.php">Moje konto</a></li>';
         echo '<li><a href="#">Koszyk</a></li>';
@@ -70,12 +56,10 @@ session_start();
   </nav>
   <div class="solutions-box">
     <?php
-    if (!isset($_SESSION['user_id'])) {
+    if (!isset($_SESSION['loggedin'])) {
       echo '<h1 class="question">Wypełnij ankietę i miej swój wkład w ratowanie planety!</h1>';
     } else {
-      $user_id = $_SESSION['user_id'];
-      $user = in_array_r($user_id, $users);
-      echo '<h1 class="question">' . $user['username'] . '! Wypełnij ankietę i miej swój wkład w ratowanie planety!' . "</h1>";
+      echo '<h1 class="question">' . $_SESSION['username'] . '! Wypełnij ankietę i miej swój wkład w ratowanie planety!' . "</h1>";
     }
     ?>
 

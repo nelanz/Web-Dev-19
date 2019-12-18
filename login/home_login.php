@@ -36,7 +36,6 @@
         </nav>
         <div class="box" style="background-color: <?php print isset($_COOKIE["colorcloud"]) ? $_COOKIE["colorcloud"]:"white"?>; color: <?php print isset($_COOKIE["color"]) ? $_COOKIE["color"]:"black"?>; overflow:auto">
             <div style="margin-top:10%"> 
-                <div><img src="<?= print $_SESSION['avatar']?>" style="width:20%"></div> <!--nie moze wyswietlic zdjecia chociaz wie gdzie powinno byc i ze jest w folderze-->
                 <h1 class="welcome-text">Witaj <?php echo $_SESSION['username'] ?>!</h1> <!--echo $user['username'];-->
                 <p style="font-size: <?php print isset($_COOKIE["size"]) ? $_COOKIE["size"]:"1" ?>em; text-align:center">Zrób zakupy w naszym sklepie i pokaż światu jak o dbasz o środowisko 💚</p>
             </div>

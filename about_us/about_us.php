@@ -1,6 +1,4 @@
 ﻿<?php
-require_once('../login/config.php');
-require_once('../login/functions.php');
 session_start();
 ?>
 
@@ -32,7 +30,7 @@ session_start();
             <input type="checkbox" id="tm">
             <ul class="main-menu clearfix">
             <?php
-                if(isset($_SESSION['user_id'])) {
+                if(isset($_SESSION['loggedin']) || $_SESSION["loggedin"] == true) {
                     echo '<li><a href="../login/logout.php" style="color: yellow">Wyloguj</a></li>';
                     echo '<li><a href="../login/my_account.php">Moje konto</a></li>';
                     echo '<li><a href="#">Koszyk</a></li>';

@@ -1,11 +1,9 @@
 <?php
-require_once('config.php');
-require_once('functions.php');
 session_start();
 
-if (isset($_SESSION['user_id'])) {
-    $user_id = $_SESSION['user_id'];
-    $user = in_array_r($user_id, $users);
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: ./login.php");
+    exit;
 }
 ?>
 <!DOCTYPE html>
@@ -44,11 +42,7 @@ if (isset($_SESSION['user_id'])) {
             <div style="margin-top:0%">
                 <h1 class="welcome-text2" >Twoje konto</h1>
                 <?php
-
-                $user_id = $_SESSION['user_id'];
-                $user = in_array_r($user_id, $users);
-                echo '<img class="acc-img" src=' . $user['image'] . '>';
-                echo '<h1 class="login-text" > Login: '.$user['username'].'</h1>';
+                echo '<h1 class="login-text" > Login: '.$_SESSION['username'].'</h1>';
                 ?>
 
             </div>
