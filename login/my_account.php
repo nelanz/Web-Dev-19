@@ -45,7 +45,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 echo '<h1 class="login-text" > Login: '.$_SESSION['username'].'</h1>';
                 ?>
                 <br>
-                <button class="edit_data" onclick="window.location.href='../register/register.php?act=edit'">Edytuj dane</button>
+                <button class="edit_data" onclick="window.location.href='../register/register.php?act=edit&id=<?php echo $_SESSION['id'];?>'">Edytuj dane</button>
             </div>
         </div>
     </div>

@@ -110,7 +110,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="box">
         <div class="content-wrap">
 
-            <h2>Logowanie</h2>
+            <?php
+            if(isset($_GET['msg'])) {
+                echo "<h3>Zarejestrowano poprawnie! Zaloguj się, aby kontynuować</h3>";
+            } else {
+                echo "<h2>Logowanie</h2>";
+            }
+            ?>
+        
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                 <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                     <label>Login</label>

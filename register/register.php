@@ -7,7 +7,7 @@ if (!isset($_GET['act'])) {
     $username_err = $password_err = $confirm_password_err = "";
 
     // wykonuje sie w momencie nacisniecia submit
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['save'])) {
 
         // Walidacja podanej nazwy uzytkownika
         // sprawdzenie czy nie podano pustej nazwy
@@ -28,7 +28,7 @@ if (!isset($_GET['act'])) {
 
                 // wykonanie przygotowanego zapytania
                 if (mysqli_stmt_execute($stmt)) {
-                    // zapisujemy wynik
+                    // zapisujemy wynik`
                     mysqli_stmt_store_result($stmt);
 
                     if (mysqli_stmt_num_rows($stmt) == 1) {
@@ -79,7 +79,7 @@ if (!isset($_GET['act'])) {
                 $param_password = password_hash($password, PASSWORD_DEFAULT); // hashowanie hasla defaultowym algorytmem
 
                 if (mysqli_stmt_execute($stmt)) {
-                    header("location: ../login/login.php");
+                    header("location: ../login/login.php?msg=registered");
                 } else {
                     echo "Rejestracja nie powiodla się. Spróbuj ponownie później.";
                 }
@@ -90,11 +90,13 @@ if (!isset($_GET['act'])) {
         mysqli_close($link);
     }
 } else {
+    require_once "./config.php";
 
     session_start(); // inicjalizujemy sesje kiedy uzytkownik klika edytuj dane
 
-    $id = $_SESSION["id"];
-    $query = mysqli_query($link, "SELECT * FROM users WHERE id = '$id'") or die(mysqli_error($link));
+    $update = true;
+    $id = $_GET['id'];
+    $query = mysqli_query($link, "SELECT * FROM users WHERE id = '" . $id . "'") or die(mysqli_error($link));
 
     // wyswietlanie danych
     if (mysqli_num_rows($query) >= 1) {
@@ -109,46 +111,45 @@ if (!isset($_GET['act'])) {
 
     require_once("./config.php");
 
-    if($_SERVER["REQUEST_METHOD" == "POST"]) {
+    if (isset($_POST['update'])) {
 
-        if(empty(trim($_POST["username"]))) {
+        if (empty(trim($_POST["username"]))) {
             $username_err = "Wprowadz nazwe uzytkownika";
         } else {
             $username = trim($_POST[$username]);
         }
 
-        if(empty(trim($_POST["password"]))){
-            $password_err = "Wprowadz nowe hasło.";     
-        } elseif(strlen(trim($_POST["password"])) < 5){
+        if (empty(trim($_POST["password"]))) {
+            $password_err = "Wprowadz nowe hasło.";
+        } elseif (strlen(trim($_POST["password"])) < 5) {
             $password_err = "Haslo musi miec przynajmniej 5 znakow.";
-        } else{
+        } else {
             $password = trim($_POST["password"]);
         }
 
-        if(empty(trim($_POST["confirm_password"]))){
+        if (empty(trim($_POST["confirm_password"]))) {
             $confirm_password_err = "Powtorz haslo";
-        } else{
+        } else {
             $confirm_password = trim($_POST["confirm_password"]);
-            if(empty($password_err) && ($password != $confirm_password)){
+            if (empty($password_err) && ($password != $confirm_password)) {
                 $confirm_password_err = "Hasla nie byly takie same.";
             }
         }
 
-        if (empty($password_err) && empty($confirm_password_err)){
-            $sql = "UPDATE users SET username = ?, password = ? WHERE id = ?";
+        if (empty($password_err) && empty($confirm_password_err)) {
+            $sql1 = "UPDATE users SET username = ?, password = ? WHERE id = ?";
 
-            if($stmt = mysqli_prepare($link, $sql)){
-                mysqli_stmt_bind_param($stmt, "ssi", $param_username, $param_password, $param_id);
+            if ($stmt = mysqli_prepare($link, $sql1)) {
+                mysqli_stmt_bind_param($stmt, "iss", $param_id, $param_username, $param_password);
 
+                $param_id = $id;
                 $param_username = $username;
                 $param_password = password_hash($password, PASSWORD_DEFAULT);
-                $param_id = $_SESSION["id"];
-                
-                if(mysqli_stmt_execute($stmt)){
+
+                if (mysqli_stmt_execute($stmt)) {
                     session_destroy();
                     header("location: ../login/login.php");
-                    exit();
-                } else{
+                } else {
                     echo "Zmiany nie powiodly sie.";
                 }
             }
@@ -209,7 +210,17 @@ if (!isset($_GET['act'])) {
                     <span class="help-block"><?php echo $confirm_password_err; ?></span>
                 </div>
                 <div class="form-group">
-                    <input type="submit" class="btn btn-primary" value="Zatwierdź">
+                    <?php
+                    if (isset($_GET['act'])) :
+                        ?>
+                        <input type="submit" class="btn btn-primary" name="update" value="Zaktualizuj">
+                    <?php
+                    else :
+                        ?>
+                        <input type="submit" class="btn btn-primary" name="save" value="Zatwierdź">
+                    <?php
+                    endif
+                    ?>
                     <input type="reset" class="btn btn-default" value="Wyczyść">
                 </div>
                 <?php
